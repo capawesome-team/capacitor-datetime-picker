@@ -59,6 +59,14 @@ However, we kindly ask you to respect our **fair use policy**:
 1. **What do I do when I have found a bug?**  
    Bug reports have top priority. Please submit your bug report [here](https://github.com/capawesome-team/capacitor-datetime-pickerissues/new/choose). We will take a look at it as soon as possible.
 
+## Demo
+
+A working example can be found here: [robingenz/capacitor-plugin-demo](https://github.com/robingenz/capacitor-plugin-demo/tree/feat/datetime-picker)
+
+| Android | iOS |
+| ---------- | ---------- |
+| <img src="https://user-images.githubusercontent.com/13857929/184374822-b1812a07-e85e-4119-a713-1aa2e3213562.gif" height="576" /> | <img src="https://user-images.githubusercontent.com/13857929/184374883-0cb87b3b-eb1e-47aa-9f74-28be70cf4dcc.gif" height="576" /> |
+
 ## Installation
 
 As long as the project is available as [Sponsorware](#sponsorware), the project will be distributed via GitHub packages.
@@ -97,10 +105,6 @@ As long as the project is available as [Sponsorware](#sponsorware), the project 
 ## Configuration
 
 No configuration required for this plugin.
-
-## Demo
-
-A working example can be found here: [robingenz/capacitor-plugin-demo](https://github.com/robingenz/capacitor-plugin-demo/tree/feat/datetime-picker)
 
 ## Usage
 
