@@ -190,8 +190,8 @@ The iOS implementation of this plugin is based on [RPicker](https://github.com/r
 
 ## Changelog
 
-See [CHANGELOG.md](https://github.com/capawesome-team/capacitor-file-picker/blob/main/CHANGELOG.md).
+See [CHANGELOG.md](https://github.com/capawesome-team/capacitor-datetime-picker/blob/main/CHANGELOG.md).
 
 ## License
 
-See [LICENSE](https://github.com/capawesome-team/capacitor-file-picker/blob/main/LICENSE).
+See [LICENSE](https://github.com/capawesome-team/capacitor-datetime-picker/blob/main/LICENSE).
