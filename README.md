@@ -21,14 +21,6 @@
 | ---------- | ----------------------------------------- | --------------------------------------------- |
 | Robin Genz | [robingenz](https://github.com/robingenz) | [@robin_genz](https://twitter.com/robin_genz) |
 
-## Sponsors
-
-This is an MIT-licensed open source project.
-It can grow thanks to the support by these awesome people.
-If you'd like to join them, please read more [here](https://github.com/sponsors/capawesome-team).
-
-<!-- sponsors --><!-- sponsors -->
-
 ## Sponsorware
 
 This project is available as **Sponsorware**.
