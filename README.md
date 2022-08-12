@@ -47,9 +47,9 @@ However, we kindly ask you to respect our **fair use policy**:
 1. **Which Capacitor versions are supported?**  
    This plugin supports only one major Capacitor version at a time. We start with Capacitor 3 and will update to Capacitor 4 soon.
 1. **What do I do when I have a feature request?**  
-   Please submit your feature request [here](https://github.com/capawesome-team/capacitor-datetime-pickerissues/new/choose). We will then review it and possibly put it on our roadmap.
+   Please submit your feature request [here](https://github.com/capawesome-team/capacitor-datetime-picker/issues/new/choose). We will then review it and possibly put it on our roadmap.
 1. **What do I do when I have found a bug?**  
-   Bug reports have top priority. Please submit your bug report [here](https://github.com/capawesome-team/capacitor-datetime-pickerissues/new/choose). We will take a look at it as soon as possible.
+   Bug reports have top priority. Please submit your bug report [here](https://github.com/capawesome-team/capacitor-datetime-picker/issues/new/choose). We will take a look at it as soon as possible.
 
 ## Demo
 
