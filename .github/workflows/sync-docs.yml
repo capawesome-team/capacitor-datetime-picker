@@ -19,7 +19,7 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.PAT }}
       with:
         source_file: 'README.md'
-        destination_repo: 'capawesome-team/capacitor-nfc'
+        destination_repo: 'capawesome-team/capacitor-datetime-picker'
         user_email: '41898282+github-actions[bot]@users.noreply.github.com'
         user_name: 'github-actions[bot]'
         commit_message: 'Update `README.md`'
@@ -29,7 +29,7 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.PAT }}
       with:
         source_file: 'CHANGELOG.md'
-        destination_repo: 'capawesome-team/capacitor-nfc'
+        destination_repo: 'capawesome-team/capacitor-datetime-picker'
         user_email: '41898282+github-actions[bot]@users.noreply.github.com'
         user_name: 'github-actions[bot]'
         commit_message: 'Update `CHANGELOG.md`'
@@ -39,7 +39,7 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.PAT }}
       with:
         source_file: 'LICENSE'
-        destination_repo: 'capawesome-team/capacitor-nfc'
+        destination_repo: 'capawesome-team/capacitor-datetime-picker'
         user_email: '41898282+github-actions[bot]@users.noreply.github.com'
         user_name: 'github-actions[bot]'
         commit_message: 'Update `LICENSE`'
