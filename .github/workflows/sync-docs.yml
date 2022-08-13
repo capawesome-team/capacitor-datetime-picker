@@ -43,3 +43,26 @@ jobs:
         user_email: '41898282+github-actions[bot]@users.noreply.github.com'
         user_name: 'github-actions[bot]'
         commit_message: 'Update `LICENSE`'
+    - name: Sync `.github/ISSUE_TEMPLATE/bug_report.md`
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: '.github/ISSUE_TEMPLATE/bug_report.md'
+        destination_repo: 'capawesome-team/capacitor-datetime-picker'
+        destination_folder: '.github/ISSUE_TEMPLATE'
+        user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+        user_name: 'github-actions[bot]'
+        commit_message: 'Update `.github/ISSUE_TEMPLATE/bug_report.md`'
+    - name: Sync `.github/ISSUE_TEMPLATE/feature_request.md`
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: '.github/ISSUE_TEMPLATE/feature_request.md'
+        destination_repo: 'capawesome-team/capacitor-datetime-picker'
+        destination_folder: '.github/ISSUE_TEMPLATE'
+        user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+        user_name: 'github-actions[bot]'
+        commit_message: 'Update `.github/ISSUE_TEMPLATE/feature_request.md`'
+
