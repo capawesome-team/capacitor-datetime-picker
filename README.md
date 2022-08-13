@@ -40,24 +40,24 @@ However, we kindly ask you to respect our **fair use policy**:
 - Please **don't distribute the source code** of the sponsors-only repository. You may freely use it for public, private or commercial projects, privately fork or mirror it, but please don't make the source code public, as it would counteract the sponsorware strategy.
 - If you cancel your subscription, you're automatically removed as a collaborator and will miss out on all future updates. However, **you may use the latest version that's available to you as long as you like**.
 
-## FAQ
-
-1. **Which platforms are supported?**  
-   This plugin supports Android and iOS. But not all features are supported on both platforms. You can read more about this in the plugin documentation.
-1. **Which Capacitor versions are supported?**  
-   This plugin supports only one major Capacitor version at a time. We start with Capacitor 3 and will update to Capacitor 4 soon.
-1. **What do I do when I have a feature request?**  
-   Please submit your feature request [here](https://github.com/capawesome-team/capacitor-datetime-picker/issues/new/choose). We will then review it and possibly put it on our roadmap.
-1. **What do I do when I have found a bug?**  
-   Bug reports have top priority. Please submit your bug report [here](https://github.com/capawesome-team/capacitor-datetime-picker/issues/new/choose). We will take a look at it as soon as possible.
-
 ## Demo
 
 A working example can be found here: [robingenz/capacitor-plugin-demo](https://github.com/robingenz/capacitor-plugin-demo/tree/feat/datetime-picker)
 
 | Android | iOS |
 | ---------- | ---------- |
-| <img src="https://user-images.githubusercontent.com/13857929/184374822-b1812a07-e85e-4119-a713-1aa2e3213562.gif" height="576" /> | <img src="https://user-images.githubusercontent.com/13857929/184374883-0cb87b3b-eb1e-47aa-9f74-28be70cf4dcc.gif" height="576" /> |
+| <img src="https://user-images.githubusercontent.com/13857929/184374822-b1812a07-e85e-4119-a713-1aa2e3213562.gif" width="324" /> | <img src="https://user-images.githubusercontent.com/13857929/184374883-0cb87b3b-eb1e-47aa-9f74-28be70cf4dcc.gif" width="266" /> |
+
+## FAQ
+
+1. **Which platforms are supported?**  
+   This plugin supports Android and iOS. But not all features are supported on both platforms. You can read more about this in the plugin documentation.
+1. **Which Capacitor versions are supported?**  
+   This plugin supports only one major Capacitor version at a time. We start with Capacitor 3 and will update to Capacitor 4 soon. The Capacitor 4 version is already available under the `next` tag.
+1. **What do I do when I have a feature request?**  
+   Please submit your feature request [here](https://github.com/capawesome-team/capacitor-datetime-picker/issues/new/choose). We will then review it and possibly put it on our roadmap.
+1. **What do I do when I have found a bug?**  
+   Bug reports have top priority. Please submit your bug report [here](https://github.com/capawesome-team/capacitor-datetime-picker/issues/new/choose). We will take a look at it as soon as possible.
 
 ## Installation
 
