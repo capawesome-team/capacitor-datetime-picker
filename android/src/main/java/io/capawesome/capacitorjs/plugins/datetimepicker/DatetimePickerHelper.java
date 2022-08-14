@@ -1,9 +1,13 @@
 package io.capawesome.capacitorjs.plugins.datetimepicker;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class DatetimePickerHelper {
 
@@ -31,6 +35,19 @@ public class DatetimePickerHelper {
                 return Theme.AUTO;
             default:
                 return null;
+        }
+    }
+
+    public static Locale convertStringToLocale(String value) {
+        return Locale.forLanguageTag(value);
+    }
+
+    public static boolean is24HourLocale(@NonNull Locale locale) {
+        String timeString = DateFormat.getTimeInstance(DateFormat.LONG, locale).format(new Date()).toUpperCase();
+        if (timeString.contains(" AM") || timeString.contains(" PM")) {
+            return false;
+        } else {
+            return true;
         }
     }
 }

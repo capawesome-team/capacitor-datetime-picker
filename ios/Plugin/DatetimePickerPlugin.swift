@@ -18,6 +18,7 @@ public class DatetimePickerPlugin: CAPPlugin {
 
     @objc func present(_ call: CAPPluginCall) {
         let format = call.getString("format") ?? "yyyy-MM-dd'T'HH:mm:ss.sss'Z'"
+        let localeString = call.getString("locale")
         let max = call.getString("max")
         let min = call.getString("min")
         let mode = call.getString("mode", "datetime")
@@ -26,6 +27,10 @@ public class DatetimePickerPlugin: CAPPlugin {
         let cancelButtonText = call.getString("cancelButtonText", "Cancel")
         let doneButtonText = call.getString("doneButtonText", "Ok")
 
+        var locale: Locale?
+        if let localeString = localeString {
+            locale = DatetimePickerHelper.convertStringToLocale(localeString)
+        }
         var date: Date = Date()
         if let value = value {
             date = DatetimePickerHelper.convertStringToDate(format, value) ?? Date()
@@ -50,13 +55,14 @@ public class DatetimePickerPlugin: CAPPlugin {
         }
 
         if mode == "datetime" {
-            implementation?.presentDatetimePicker(date: date, minDate: minDate, maxDate: maxDate,
+            implementation?.presentDatetimePicker(date: date, minDate: minDate, maxDate: maxDate, locale: locale,
                                                   cancelButtonText: cancelButtonText, doneButtonText: doneButtonText, theme: theme, completion: completion)
         } else if mode == "date" {
-            implementation?.presentDatePicker(date: date, minDate: minDate, maxDate: maxDate,
+            implementation?.presentDatePicker(date: date, minDate: minDate, maxDate: maxDate, locale: locale,
                                               cancelButtonText: cancelButtonText, doneButtonText: doneButtonText, theme: theme, completion: completion)
         } else if mode == "time" {
-            implementation?.presentTimePicker(date: date, cancelButtonText: cancelButtonText, doneButtonText: doneButtonText, theme: theme, completion: completion)
+            implementation?.presentTimePicker(date: date, locale: locale, cancelButtonText: cancelButtonText,
+                                              doneButtonText: doneButtonText, theme: theme, completion: completion)
         } else {
             call.reject(errorModeInvalid)
         }

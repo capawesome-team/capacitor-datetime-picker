@@ -5,13 +5,13 @@ import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.res.Configuration;
 import android.text.format.DateFormat;
-import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.TimePicker;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 public class DatetimePicker {
 
@@ -27,6 +27,7 @@ public class DatetimePicker {
         Date date,
         @Nullable Date minDate,
         @Nullable Date maxDate,
+        @Nullable Locale locale,
         String cancelButtonText,
         String doneButtonText,
         @Nullable String theme,
@@ -36,6 +37,7 @@ public class DatetimePicker {
             date,
             minDate,
             maxDate,
+            locale,
             cancelButtonText,
             doneButtonText,
             theme,
@@ -44,6 +46,7 @@ public class DatetimePicker {
                 public void success(Date date) {
                     presentTimePicker(
                         date,
+                        locale,
                         cancelButtonText,
                         doneButtonText,
                         theme,
@@ -73,11 +76,16 @@ public class DatetimePicker {
         Date date,
         @Nullable Date minDate,
         @Nullable Date maxDate,
+        @Nullable Locale locale,
         String cancelButtonText,
         String doneButtonText,
         @Nullable String theme,
         final PresentResultCallback resultCallback
     ) {
+        if (locale != null) {
+            this.updateLocaleConfiguration(locale);
+        }
+
         Calendar calendar = this.createCalendarFromDate(date);
 
         final DatePickerDialog dialog = new DatePickerDialog(
@@ -118,12 +126,21 @@ public class DatetimePicker {
 
     public void presentTimePicker(
         Date date,
+        @Nullable Locale locale,
         String cancelButtonText,
         String doneButtonText,
         @Nullable String theme,
         final PresentResultCallback resultCallback
     ) {
+        if (locale != null) {
+            this.updateLocaleConfiguration(locale);
+        }
+
         Calendar calendar = this.createCalendarFromDate(date);
+        boolean is24HourView = DateFormat.is24HourFormat(plugin.getContext());
+        if (locale != null) {
+            is24HourView = DatetimePickerHelper.is24HourLocale(locale);
+        }
 
         final TimePickerDialog dialog = new TimePickerDialog(
             plugin.getContext(),
@@ -140,7 +157,7 @@ public class DatetimePicker {
             },
             calendar.get(Calendar.HOUR_OF_DAY),
             calendar.get(Calendar.MINUTE),
-            DateFormat.is24HourFormat(plugin.getContext())
+            is24HourView
         );
         dialog.create();
 
@@ -190,5 +207,11 @@ public class DatetimePicker {
                 }
         }
         return R.style.MaterialLightTheme;
+    }
+
+    private void updateLocaleConfiguration(@NonNull Locale locale) {
+        Configuration config = new Configuration();
+        config.locale = locale;
+        plugin.getContext().getResources().updateConfiguration(config, plugin.getContext().getResources().getDisplayMetrics());
     }
 }

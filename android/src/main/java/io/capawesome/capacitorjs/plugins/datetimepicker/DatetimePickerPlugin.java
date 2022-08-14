@@ -7,6 +7,7 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 import java.util.Date;
+import java.util.Locale;
 
 @CapacitorPlugin(name = "DatetimePicker")
 public class DatetimePickerPlugin extends Plugin {
@@ -26,6 +27,7 @@ public class DatetimePickerPlugin extends Plugin {
     public void present(PluginCall call) {
         try {
             String format = call.getString("format", "yyyy-MM-dd'T'HH:mm:ss.sss'Z'");
+            String localeString = call.getString("locale");
             String max = call.getString("max");
             String min = call.getString("min");
             String mode = call.getString("mode", "datetime");
@@ -34,6 +36,10 @@ public class DatetimePickerPlugin extends Plugin {
             String cancelButtonText = call.getString("cancelButtonText", "Cancel");
             String doneButtonText = call.getString("doneButtonText", "Ok");
 
+            Locale locale = null;
+            if (localeString != null) {
+                locale = DatetimePickerHelper.convertStringToLocale(localeString);
+            }
             Date date = new Date();
             if (value != null) {
                 date = DatetimePickerHelper.convertStringToDate(format, value);
@@ -64,11 +70,20 @@ public class DatetimePickerPlugin extends Plugin {
             };
 
             if (mode.equals("datetime")) {
-                implementation.presentDateTimePicker(date, minDate, maxDate, cancelButtonText, doneButtonText, theme, resultCallback);
+                implementation.presentDateTimePicker(
+                    date,
+                    minDate,
+                    maxDate,
+                    locale,
+                    cancelButtonText,
+                    doneButtonText,
+                    theme,
+                    resultCallback
+                );
             } else if (mode.equals("date")) {
-                implementation.presentDatePicker(date, minDate, maxDate, cancelButtonText, doneButtonText, theme, resultCallback);
+                implementation.presentDatePicker(date, minDate, maxDate, locale, cancelButtonText, doneButtonText, theme, resultCallback);
             } else if (mode.equals("time")) {
-                implementation.presentTimePicker(date, cancelButtonText, doneButtonText, theme, resultCallback);
+                implementation.presentTimePicker(date, locale, cancelButtonText, doneButtonText, theme, resultCallback);
             } else {
                 call.reject(ERROR_MODE_INVALID);
             }

@@ -12,8 +12,8 @@ declare module '@capacitor/cli' {
        *
        * Only available for Android and iOS.
        *
-       * @default 'auto'
        * @since 0.0.1
+       * @default 'auto'
        */
       theme?: 'auto' | 'light' | 'dark';
     };
@@ -35,25 +35,31 @@ export interface PresentOptions {
   /**
    * The cancel button text.
    *
-   * @default 'Cancel'
    * @since 0.0.1
+   * @default 'Cancel'
    */
   cancelButtonText?: string;
   /**
    * The done button text.
    *
-   * @default 'Ok'
    * @since 0.0.1
+   * @default 'Ok'
    */
   doneButtonText?: string;
   /**
    * The format in which values are received and returned.
    *
-   * @default 'yyyy-MM-dd'T'HH:mm:ss.sss'Z''
-   *
    * @since 0.0.1
+   * @default 'yyyy-MM-dd'T'HH:mm:ss.sss'Z''
    */
   format?: string;
+  /**
+   * BCP 47 language tag to define the language of the UI.
+   *
+   * @since 0.0.2
+   * @example 'en-US'
+   */
+  locale?: string;
   /**
    * The latest date and time to accept.
    * The format of this value must match the value of the `format` parameter.
@@ -74,14 +80,13 @@ export interface PresentOptions {
    * Whether you want a date or time or datetime picker.
    *
    * @since 0.0.1
-   *
    * @default 'datetime'
    */
   mode?: 'date' | 'time' | 'datetime';
   /**
    * Choose the theme that the datetime picker should have.
    * With `auto` the system theme is used.
-   * This value overwrites the configuration.
+   * This value overwrites the `theme` configuration value.
    *
    * Only available for Android and iOS.
    *

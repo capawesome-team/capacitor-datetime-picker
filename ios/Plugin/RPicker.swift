@@ -42,12 +42,13 @@ import UIKit
                                 selectedDate: Date = Date(),
                                 minDate: Date? = nil,
                                 maxDate: Date? = nil,
+                                locale: Locale? = nil,
                                 style: DatetimePickerStyle = .inline,
                                 theme: Theme = .auto,
                                 completion: ((_ date: Date?) -> Void)?) {
 
         guard let vc = controller(title: title, cancelText: cancelText, doneText: doneText, datePickerMode: datePickerMode,
-                                  selectedDate: selectedDate, minDate: minDate, maxDate: maxDate, style: style, theme: theme) else { return }
+                                  selectedDate: selectedDate, minDate: minDate, maxDate: maxDate, locale: locale, style: style, theme: theme) else { return }
 
         vc.onDateSelected = { (selectedData) in
             completion?(selectedData)
@@ -64,6 +65,7 @@ import UIKit
                                   selectedDate: Date = Date(),
                                   minDate: Date? = nil,
                                   maxDate: Date? = nil,
+                                  locale: Locale? = nil,
                                   style: DatetimePickerStyle = .inline,
                                   theme: Theme = .auto) -> RPickerController? {
 
@@ -72,7 +74,7 @@ import UIKit
                 RPicker.sharedInstance.isPresented = true
 
                 let vc = RPickerController(title: title, cancelText: cancelText, doneText: doneText, datePickerMode: datePickerMode,
-                                           selectedDate: selectedDate, minDate: minDate, maxDate: maxDate, style: style, theme: theme)
+                                           selectedDate: selectedDate, minDate: minDate, maxDate: maxDate, locale: locale, style: style, theme: theme)
 
                 vc.modalPresentationStyle = .overCurrentContext
                 vc.modalTransitionStyle = .crossDissolve
@@ -123,6 +125,7 @@ class RPickerController: UIViewController {
     var titleText: String?
     var cancelText: String?
     var doneText: String = "Done"
+    var locale: Locale?
     var datePickerMode: UIDatePicker.Mode = .date
     var datePickerStyle: DatetimePickerStyle = .inline
     var theme: Theme = .auto
@@ -143,6 +146,7 @@ class RPickerController: UIViewController {
          selectedDate: Date = Date(),
          minDate: Date? = nil,
          maxDate: Date? = nil,
+         locale: Locale? = nil,
          style: DatetimePickerStyle = .inline,
          theme: Theme = .auto) {
 
@@ -153,6 +157,7 @@ class RPickerController: UIViewController {
         self.selectedDate = selectedDate
         self.minDate = minDate
         self.maxDate = maxDate
+        self.locale = locale
         self.datePickerStyle = style
         self.theme = theme
 
@@ -303,6 +308,9 @@ class RPickerController: UIViewController {
         picker.maximumDate = maxDate
         picker.date = selectedDate
         picker.datePickerMode = datePickerMode
+        if let locale = locale {
+            picker.locale = locale
+        }
 
         if #available(iOS 14, *) {
             if datePickerStyle == .wheel {

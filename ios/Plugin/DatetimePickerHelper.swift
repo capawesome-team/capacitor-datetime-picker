@@ -25,4 +25,8 @@ public class DatetimePickerHelper {
         }
         return nil
     }
+
+    public static func convertStringToLocale(_ value: String) -> Locale {
+        return Locale(identifier: value)
+    }
 }
