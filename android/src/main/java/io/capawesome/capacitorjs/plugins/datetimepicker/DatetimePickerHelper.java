@@ -2,7 +2,6 @@ package io.capawesome.capacitorjs.plugins.datetimepicker;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
