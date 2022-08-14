@@ -42,7 +42,7 @@ import UIKit
                                 selectedDate: Date = Date(),
                                 minDate: Date? = nil,
                                 maxDate: Date? = nil,
-                                style: DatetimePickerStyle = .wheel,
+                                style: DatetimePickerStyle = .inline,
                                 theme: Theme = .auto,
                                 completion: ((_ date: Date?) -> Void)?) {
 
@@ -64,7 +64,7 @@ import UIKit
                                   selectedDate: Date = Date(),
                                   minDate: Date? = nil,
                                   maxDate: Date? = nil,
-                                  style: DatetimePickerStyle = .wheel,
+                                  style: DatetimePickerStyle = .inline,
                                   theme: Theme = .auto) -> RPickerController? {
 
         if let cc = UIWindow.currentController {
@@ -124,7 +124,7 @@ class RPickerController: UIViewController {
     var cancelText: String?
     var doneText: String = "Done"
     var datePickerMode: UIDatePicker.Mode = .date
-    var datePickerStyle: DatetimePickerStyle = .wheel
+    var datePickerStyle: DatetimePickerStyle = .inline
     var theme: Theme = .auto
 
     // MARK: - Private variables
@@ -143,7 +143,7 @@ class RPickerController: UIViewController {
          selectedDate: Date = Date(),
          minDate: Date? = nil,
          maxDate: Date? = nil,
-         style: DatetimePickerStyle = .wheel,
+         style: DatetimePickerStyle = .inline,
          theme: Theme = .auto) {
 
         self.titleText = title
