@@ -114,7 +114,6 @@ const present = async () => {
     mode: 'time',
     value: date.toISOString(),
     theme: 'dark',
-    locale: 'en-US',
   });
 
   return value;
