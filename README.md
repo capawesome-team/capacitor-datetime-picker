@@ -46,7 +46,9 @@ A working example can be found here: [robingenz/capacitor-plugin-demo](https://g
 
 | Android | iOS |
 | ---------- | ---------- |
-| <img src="https://user-images.githubusercontent.com/13857929/184374822-b1812a07-e85e-4119-a713-1aa2e3213562.gif" width="324" /> | <img src="https://user-images.githubusercontent.com/13857929/184374883-0cb87b3b-eb1e-47aa-9f74-28be70cf4dcc.gif" width="266" /> |
+| <img src="https://user-images.githubusercontent.com/13857929/184545710-a837f45f-e335-4903-b3a9-e1f30b42163f.gif" width="324" /> | <img src="https://user-images.githubusercontent.com/13857929/184545717-a10291e4-95fe-4453-91f7-c04246c61dec.gif" width="266" /> |
+
+
 
 ## FAQ
 
@@ -168,10 +170,11 @@ Only available for Android and iOS.
 | **`cancelButtonText`** | <code>string</code>                         | The cancel button text.                                                                                                                                                                                                 | <code>'Cancel'</code>                       | 0.0.1 |
 | **`doneButtonText`**   | <code>string</code>                         | The done button text.                                                                                                                                                                                                   | <code>'Ok'</code>                           | 0.0.1 |
 | **`format`**           | <code>string</code>                         | The format in which values are received and returned.                                                                                                                                                                   | <code>'yyyy-MM-dd'T'HH:mm:ss.sss'Z''</code> | 0.0.1 |
+| **`locale`**           | <code>string</code>                         | BCP 47 language tag to define the language of the UI.                                                                                                                                                                   |                                             | 0.0.2 |
 | **`max`**              | <code>string</code>                         | The latest date and time to accept. The format of this value must match the value of the `format` parameter. This value must specify a date string later than or equal to the one specified by the `min` attribute.     |                                             | 0.0.1 |
 | **`min`**              | <code>string</code>                         | The earliest date and time to accept. The format of this value must match the value of the `format` parameter. This value must specify a date string earlier than or equal to the one specified by the `max` attribute. |                                             | 0.0.1 |
 | **`mode`**             | <code>'date' \| 'time' \| 'datetime'</code> | Whether you want a date or time or datetime picker.                                                                                                                                                                     | <code>'datetime'</code>                     | 0.0.1 |
-| **`theme`**            | <code>'auto' \| 'light' \| 'dark'</code>    | Choose the theme that the datetime picker should have. With `auto` the system theme is used. This value overwrites the configuration. Only available for Android and iOS.                                               |                                             | 0.0.1 |
+| **`theme`**            | <code>'auto' \| 'light' \| 'dark'</code>    | Choose the theme that the datetime picker should have. With `auto` the system theme is used. This value overwrites the `theme` configuration value. Only available for Android and iOS.                                 |                                             | 0.0.1 |
 | **`value`**            | <code>string</code>                         | The predefined value when opening the picker. The format of this value must match the value of the `format` parameter.                                                                                                  |                                             | 0.0.1 |
 
 </docgen-api>
