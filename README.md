@@ -46,7 +46,9 @@ A working example can be found here: [robingenz/capacitor-plugin-demo](https://g
 
 | Android | iOS |
 | ---------- | ---------- |
-| <img src="https://user-images.githubusercontent.com/13857929/184374822-b1812a07-e85e-4119-a713-1aa2e3213562.gif" width="324" /> | <img src="https://user-images.githubusercontent.com/13857929/184374883-0cb87b3b-eb1e-47aa-9f74-28be70cf4dcc.gif" width="266" /> |
+| <img src="https://user-images.githubusercontent.com/13857929/184545710-a837f45f-e335-4903-b3a9-e1f30b42163f.gif" width="324" /> | <img src="https://user-images.githubusercontent.com/13857929/184545717-a10291e4-95fe-4453-91f7-c04246c61dec.gif" width="266" /> |
+
+
 
 ## FAQ
 
