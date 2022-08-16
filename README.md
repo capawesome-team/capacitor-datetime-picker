@@ -53,7 +53,7 @@ A working example can be found here: [robingenz/capacitor-plugin-demo](https://g
 ## FAQ
 
 1. **Which platforms are supported?**  
-   This plugin supports Android and iOS. But not all features are supported on both platforms. You can read more about this in the plugin documentation.
+   This plugin supports Android and iOS.
 1. **Which Capacitor versions are supported?**  
    This plugin supports only one major Capacitor version at a time. We start with Capacitor 3 and will update to Capacitor 4 soon. The Capacitor 4 version is already available under the `next` tag.
 1. **What do I do when I have a feature request?**  
