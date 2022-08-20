@@ -15,7 +15,7 @@ on:
 
 env:
   NODE_VERSION: 16
-  JAVA_VERSION: 8
+  JAVA_VERSION: 11
 
 jobs:
   build:

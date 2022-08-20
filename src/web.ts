@@ -8,7 +8,8 @@ import type {
 
 export class DatetimePickerWeb
   extends WebPlugin
-  implements DatetimePickerPlugin {
+  implements DatetimePickerPlugin
+{
   public async present(_options: PresentOptions): Promise<PresentResult> {
     throw this.unimplemented('Not implemented on web.');
   }

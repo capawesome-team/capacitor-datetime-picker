@@ -53,7 +53,7 @@ A working example can be found here: [robingenz/capacitor-plugin-demo](https://g
 1. **Which platforms are supported?**  
    This plugin supports Android and iOS.
 1. **Which Capacitor versions are supported?**  
-   This plugin supports only one major Capacitor version at a time. We start with Capacitor 3 and will update to Capacitor 4 soon. The Capacitor 4 version is already available under the `next` tag.
+   There is a version for Capacitor 3 and Capacitor 4. However, new updates are only ever provided for the latest Capacitor major version (currently Capacitor 4).
 1. **What do I do when I have a feature request?**  
    Please submit your feature request [here](https://github.com/capawesome-team/capacitor-datetime-picker/issues/new/choose). We will then review it and possibly put it on our roadmap.
 1. **What do I do when I have found a bug?**  
@@ -80,14 +80,14 @@ As long as the project is available as [Sponsorware](#sponsorware), the project 
 1. Install the package with **Capacitor 3**:
 
    ```bash
-   npm install @capawesome-team/capacitor-datetime-picker@latest
+   npm install @capawesome-team/capacitor-datetime-picker@0.0.2
    npx cap sync
    ```
 
    Install the package with **Capacitor 4**:
 
    ```bash
-   npm install @capawesome-team/capacitor-datetime-picker@next
+   npm install @capawesome-team/capacitor-datetime-picker
    npx cap sync
    ```
 
