@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/capawesome-team/sponsorware/compare/v0.0.2...v0.1.0) (2022-08-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* update to Capacitor 4 (#1)
+
+### Features
+
+* update to Capacitor 4 ([#1](https://github.com/capawesome-team/sponsorware/issues/1)) ([1caa23f](https://github.com/capawesome-team/sponsorware/commit/1caa23fa30d57a11ea319e8e89a7ffd8028476b5))
+
 ### [0.0.2](https://github.com/capawesome-team/sponsorware/compare/v0.0.1...v0.0.2) (2022-08-14)
 
 
