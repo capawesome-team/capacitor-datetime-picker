@@ -139,6 +139,8 @@ present(options?: PresentOptions | undefined) => Promise<PresentResult>
 
 Open the datetime picker.
 
+An error is thrown if the input is canceled or dismissed by the user.
+
 Only available for Android and iOS.
 
 | Param         | Type                                                      |
@@ -157,9 +159,9 @@ Only available for Android and iOS.
 
 #### PresentResult
 
-| Prop        | Type                | Description                                                                                                                                               | Since |
-| ----------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
-| **`value`** | <code>string</code> | The value entered by the user. The value is not provided if the input was canceled. The format of this value matches the value of the `format` parameter. | 0.0.1 |
+| Prop        | Type                | Description                                                                                          | Since |
+| ----------- | ------------------- | ---------------------------------------------------------------------------------------------------- | ----- |
+| **`value`** | <code>string</code> | The value entered by the user. The format of this value matches the value of the `format` parameter. | 0.0.1 |
 
 
 #### PresentOptions
