@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/capawesome-team/sponsorware/compare/v0.1.0...v0.2.0) (2022-08-24)
+
+
+### ⚠ BREAKING CHANGES
+
+- feat: throw error on cancel or dismiss (#8)
+
+### Features
+
+- feat: throw error on cancel or dismiss ([#8](https://github.com/capawesome-team/sponsorware/issues/8)) ([6649042](https://github.com/capawesome-team/sponsorware/commit/66490423c769a3560fa2120fa290b07ebdd30678))
+
 ## [0.1.0](https://github.com/capawesome-team/sponsorware/compare/v0.0.2...v0.1.0) (2022-08-20)
 
 
