@@ -18,6 +18,7 @@
 		50E1A94820377CB70090CE1A /* DatetimePickerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E1A94720377CB70090CE1A /* DatetimePickerPlugin.swift */; };
 		7C0B236E28A3D60300C78F21 /* DatetimePickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0B236D28A3D60300C78F21 /* DatetimePickerHelper.swift */; };
 		7C0CB8CE28A3D7D9000D55CD /* RPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0CB8CD28A3D7D9000D55CD /* RPicker.swift */; };
+		7CA3513828B69A7C00D3C1C7 /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA3513728B69A7C00D3C1C7 /* ErrorCode.swift */; };
 		7CD7816928A3976B001BEAAE /* DatetimePickerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD7816828A3976B001BEAAE /* DatetimePickerConfig.swift */; };
 		7CD7816B28A39BA0001BEAAE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD7816A28A39BA0001BEAAE /* Theme.swift */; };
 		7CE32AE328A6810C0064C6BE /* DatetimePickerStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE32AE228A6810C0064C6BE /* DatetimePickerStyle.swift */; };
@@ -48,6 +49,7 @@
 		5E23F77F099397094342571A /* Pods-Plugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plugin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plugin/Pods-Plugin.debug.xcconfig"; sourceTree = "<group>"; };
 		7C0B236D28A3D60300C78F21 /* DatetimePickerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatetimePickerHelper.swift; sourceTree = "<group>"; };
 		7C0CB8CD28A3D7D9000D55CD /* RPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPicker.swift; sourceTree = "<group>"; };
+		7CA3513728B69A7C00D3C1C7 /* ErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCode.swift; sourceTree = "<group>"; };
 		7CD7816828A3976B001BEAAE /* DatetimePickerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatetimePickerConfig.swift; sourceTree = "<group>"; };
 		7CD7816A28A39BA0001BEAAE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		7CE32AE228A6810C0064C6BE /* DatetimePickerStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatetimePickerStyle.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				7CD7816828A3976B001BEAAE /* DatetimePickerConfig.swift */,
 				7CD7816A28A39BA0001BEAAE /* Theme.swift */,
 				7CE32AE228A6810C0064C6BE /* DatetimePickerStyle.swift */,
+				7CA3513728B69A7C00D3C1C7 /* ErrorCode.swift */,
 			);
 			path = Plugin;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				2F98D68224C9AAE500613A4C /* DatetimePicker.swift in Sources */,
 				7C0B236E28A3D60300C78F21 /* DatetimePickerHelper.swift in Sources */,
 				7CD7816B28A39BA0001BEAAE /* Theme.swift in Sources */,
+				7CA3513828B69A7C00D3C1C7 /* ErrorCode.swift in Sources */,
 				7C0CB8CE28A3D7D9000D55CD /* RPicker.swift in Sources */,
 				7CD7816928A3976B001BEAAE /* DatetimePickerConfig.swift in Sources */,
 				50ADFFA82020EE4F00D50D53 /* DatetimePickerPlugin.m in Sources */,

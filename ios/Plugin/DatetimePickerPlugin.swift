@@ -8,6 +8,10 @@ import Capacitor
 @objc(DatetimePickerPlugin)
 public class DatetimePickerPlugin: CAPPlugin {
     public let errorModeInvalid = "The provided mode is invalid."
+    public let errorPickerCanceled = "The picker was canceled."
+    public let errorPickerDismissed = "The picker was dismissed."
+    public let errorCodeCanceled = "canceled"
+    public let errorCodeDismissed = "dismissed"
 
     private var implementation: DatetimePicker?
 
@@ -44,14 +48,23 @@ public class DatetimePickerPlugin: CAPPlugin {
             maxDate = DatetimePickerHelper.convertStringToDate(format, max)
         }
 
-        let completion: (Date?) -> Void = { date in
-            var value: String?
-            if let date = date {
-                value = DatetimePickerHelper.convertDateToString(format, date)
+        let completion: (Date?, ErrorCode) -> Void = { (date, errorCode) in
+            switch errorCode {
+            case .canceled:
+                call.reject(self.errorPickerCanceled, self.errorCodeCanceled, nil, nil)
+                return
+            case .dismissed:
+                call.reject(self.errorPickerDismissed, self.errorCodeDismissed, nil, nil)
+                return
+            case .none:
+                var value: String?
+                if let date = date {
+                    value = DatetimePickerHelper.convertDateToString(format, date)
+                }
+                var result = JSObject()
+                result["value"] = value
+                call.resolve(result)
             }
-            var result = JSObject()
-            result["value"] = value
-            call.resolve(result)
         }
 
         if mode == "datetime" {

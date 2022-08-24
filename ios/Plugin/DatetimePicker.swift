@@ -11,32 +11,34 @@ import Foundation
         self.config = config
     }
 
-    @objc public func presentDatetimePicker(date: Date, minDate: Date?, maxDate: Date?, locale: Locale?, cancelButtonText: String, doneButtonText: String, theme: String?, completion: @escaping (Date?) -> Void) {
+    @objc public func presentDatetimePicker(date: Date, minDate: Date?, maxDate: Date?, locale: Locale?, cancelButtonText: String, doneButtonText: String, theme: String?, completion: @escaping (Date?, ErrorCode) -> Void) {
         closeKeyboard()
         DispatchQueue.main.asyncAfter(deadline: .now() + waitForKeyboardCloseSeconds) {
             RPicker.selectDate(title: "", cancelText: cancelButtonText, doneText: doneButtonText, datePickerMode: .dateAndTime, selectedDate: date,
-                               minDate: minDate, maxDate: maxDate, locale: locale, theme: self.getTheme(unconvertedTheme: theme), completion: { (date) in
-                                completion(date)
+                               minDate: minDate, maxDate: maxDate, locale: locale, theme: self.getTheme(unconvertedTheme: theme), completion: { (date, errorCode) in
+                                completion(date, errorCode)
                                })
         }
     }
 
-    @objc public func presentDatePicker(date: Date, minDate: Date?, maxDate: Date?, locale: Locale?, cancelButtonText: String, doneButtonText: String, theme: String?, completion: @escaping (Date?) -> Void) {
+    @objc public func presentDatePicker(date: Date, minDate: Date?, maxDate: Date?, locale: Locale?, cancelButtonText: String, doneButtonText: String, theme: String?, completion: @escaping (Date?, ErrorCode) -> Void) {
         closeKeyboard()
         DispatchQueue.main.asyncAfter(deadline: .now() + waitForKeyboardCloseSeconds) {
             RPicker.selectDate(title: "", cancelText: cancelButtonText, doneText: doneButtonText,
-                               datePickerMode: .date, selectedDate: date, minDate: minDate, maxDate: maxDate, locale: locale, theme: self.getTheme(unconvertedTheme: theme), completion: { (date) in
-                                completion(date)
+                               datePickerMode: .date, selectedDate: date, minDate: minDate, maxDate: maxDate, locale: locale,
+                               theme: self.getTheme(unconvertedTheme: theme), completion: { (date, errorCode) in
+                                completion(date, errorCode)
                                })
         }
     }
 
-    @objc public func presentTimePicker(date: Date, locale: Locale?, cancelButtonText: String, doneButtonText: String, theme: String?, completion: @escaping (Date?) -> Void) {
+    @objc public func presentTimePicker(date: Date, locale: Locale?, cancelButtonText: String, doneButtonText: String, theme: String?, completion: @escaping (Date?, ErrorCode) -> Void) {
         closeKeyboard()
         DispatchQueue.main.asyncAfter(deadline: .now() + waitForKeyboardCloseSeconds) {
             RPicker.selectDate(title: "", cancelText: cancelButtonText, doneText: doneButtonText,
-                               datePickerMode: .time, selectedDate: date, locale: locale, style: DatetimePickerStyle.wheel, theme: self.getTheme(unconvertedTheme: theme), completion: { (date) in
-                                completion(date)
+                               datePickerMode: .time, selectedDate: date, locale: locale, style: DatetimePickerStyle.wheel,
+                               theme: self.getTheme(unconvertedTheme: theme), completion: { (date, errorCode) in
+                                completion(date, errorCode)
                                })
         }
     }

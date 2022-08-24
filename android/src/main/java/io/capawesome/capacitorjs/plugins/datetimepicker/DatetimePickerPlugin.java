@@ -15,6 +15,10 @@ public class DatetimePickerPlugin extends Plugin {
     public static final String TAG = "DatetimePickerPlugin";
 
     public static final String ERROR_MODE_INVALID = "The provided mode is invalid.";
+    public static final String ERROR_PICKER_CANCELED = "The picker was canceled.";
+    public static final String ERROR_PICKER_DISMISSED = "The picker was dismissed.";
+    public static final String ERROR_CODE_CANCELED = "canceled";
+    public static final String ERROR_CODE_DISMISSED = "dismissed";
 
     private DatetimePicker implementation;
 
@@ -52,22 +56,17 @@ public class DatetimePickerPlugin extends Plugin {
             if (max != null) {
                 maxDate = DatetimePickerHelper.convertStringToDate(format, max);
             }
-            PresentResultCallback resultCallback = new PresentResultCallback() {
-                @Override
-                public void success(Date date) {
-                    String value = DatetimePickerHelper.convertDateToString(format, date);
+            PresentResultCallback resultCallback = new PresentResultCallback();
+            resultCallback.setSuccessListener(
+                selectedDate -> {
+                    String dateAsString = DatetimePickerHelper.convertDateToString(format, selectedDate);
                     JSObject result = new JSObject();
-                    result.put("value", value);
+                    result.put("value", dateAsString);
                     call.resolve(result);
                 }
-
-                @Override
-                public void cancel() {
-                    JSObject result = new JSObject();
-                    result.put("value", null);
-                    call.resolve(result);
-                }
-            };
+            );
+            resultCallback.setCancelListener(() -> call.reject(ERROR_PICKER_CANCELED, ERROR_CODE_CANCELED));
+            resultCallback.setDismissListener(() -> call.reject(ERROR_PICKER_DISMISSED, ERROR_CODE_DISMISSED));
 
             if (mode.equals("datetime")) {
                 implementation.presentDateTimePicker(

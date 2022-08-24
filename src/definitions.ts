@@ -24,6 +24,8 @@ export interface DatetimePickerPlugin {
   /**
    * Open the datetime picker.
    *
+   * An error is thrown if the input is canceled or dismissed by the user.
+   *
    * Only available for Android and iOS.
    *
    * @since 0.0.1
@@ -105,10 +107,24 @@ export interface PresentOptions {
 export interface PresentResult {
   /**
    * The value entered by the user.
-   * The value is not provided if the input was canceled.
    * The format of this value matches the value of the `format` parameter.
    *
    * @since 0.0.1
    */
-  value?: string;
+  value: string;
+}
+
+export enum ErrorCode {
+  /**
+   * The picker was canceled by the user.
+   *
+   * @since 0.1.0
+   */
+  canceled = 'canceled',
+  /**
+   * The picker was dismissed by the user.
+   *
+   * @since 0.1.0
+   */
+  dismissed = 'dismissed',
 }

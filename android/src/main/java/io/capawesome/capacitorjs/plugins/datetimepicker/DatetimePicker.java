@@ -33,43 +33,19 @@ public class DatetimePicker {
         @Nullable String theme,
         final PresentResultCallback resultCallback
     ) {
-        presentDatePicker(
-            date,
-            minDate,
-            maxDate,
-            locale,
-            cancelButtonText,
-            doneButtonText,
-            theme,
-            new PresentResultCallback() {
-                @Override
-                public void success(Date date) {
-                    presentTimePicker(
-                        date,
-                        locale,
-                        cancelButtonText,
-                        doneButtonText,
-                        theme,
-                        new PresentResultCallback() {
-                            @Override
-                            public void success(Date date) {
-                                resultCallback.success(date);
-                            }
-
-                            @Override
-                            public void cancel() {
-                                resultCallback.cancel();
-                            }
-                        }
-                    );
-                }
-
-                @Override
-                public void cancel() {
-                    resultCallback.cancel();
-                }
+        PresentResultCallback dateResultCallback = new PresentResultCallback();
+        dateResultCallback.setSuccessListener(
+            selectedDate -> {
+                PresentResultCallback timeResultCallback = new PresentResultCallback();
+                timeResultCallback.setSuccessListener((Date selectedDateAndTime) -> resultCallback.success(selectedDateAndTime));
+                timeResultCallback.setCancelListener(() -> resultCallback.cancel());
+                timeResultCallback.setDismissListener(() -> resultCallback.dismiss());
+                presentTimePicker(selectedDate, locale, cancelButtonText, doneButtonText, theme, timeResultCallback);
             }
         );
+        dateResultCallback.setCancelListener(() -> resultCallback.cancel());
+        dateResultCallback.setDismissListener(() -> resultCallback.dismiss());
+        presentDatePicker(date, minDate, maxDate, locale, cancelButtonText, doneButtonText, theme, dateResultCallback);
     }
 
     public void presentDatePicker(
@@ -99,6 +75,7 @@ public class DatetimePicker {
             calendar.get(Calendar.MONTH),
             calendar.get(Calendar.DAY_OF_MONTH)
         );
+        dialog.setOnDismissListener(_dialog -> resultCallback.dismiss());
         dialog.create();
 
         Button doneButton = dialog.getButton(Dialog.BUTTON_POSITIVE);
@@ -159,6 +136,7 @@ public class DatetimePicker {
             calendar.get(Calendar.MINUTE),
             is24HourView
         );
+        dialog.setOnDismissListener(_dialog -> resultCallback.dismiss());
         dialog.create();
 
         Button doneButton = dialog.getButton(Dialog.BUTTON_POSITIVE);

@@ -45,16 +45,19 @@ import UIKit
                                 locale: Locale? = nil,
                                 style: DatetimePickerStyle = .inline,
                                 theme: Theme = .auto,
-                                completion: ((_ date: Date?) -> Void)?) {
+                                completion: ((_ date: Date?, _ errorCode: ErrorCode) -> Void)?) {
 
         guard let vc = controller(title: title, cancelText: cancelText, doneText: doneText, datePickerMode: datePickerMode,
                                   selectedDate: selectedDate, minDate: minDate, maxDate: maxDate, locale: locale, style: style, theme: theme) else { return }
 
         vc.onDateSelected = { (selectedData) in
-            completion?(selectedData)
+            completion?(selectedData, ErrorCode.none)
         }
         vc.onCanceled = { () in
-            completion?(nil)
+            completion?(nil, ErrorCode.canceled)
+        }
+        vc.onBackdropDismissed = { () in
+            completion?(nil, ErrorCode.dismissed)
         }
     }
 
@@ -116,6 +119,7 @@ class RPickerController: UIViewController {
     // MARK: - Public closuers
     var onDateSelected : ((_ date: Date) -> Void)?
     var onCanceled : (() -> Void)?
+    var onBackdropDismissed : (() -> Void)?
     var onWillDismiss : (() -> Void)?
 
     // MARK: - Public variables
@@ -278,7 +282,7 @@ class RPickerController: UIViewController {
     }
 
     @objc func handleTap() {
-        onCanceled?()
+        onBackdropDismissed?()
         dismissVC()
     }
 
