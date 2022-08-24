@@ -118,13 +118,13 @@ export enum ErrorCode {
   /**
    * The picker was canceled by the user.
    *
-   * @since 0.1.0
+   * @since 0.2.0
    */
   canceled = 'canceled',
   /**
    * The picker was dismissed by the user.
    *
-   * @since 0.1.0
+   * @since 0.2.0
    */
   dismissed = 'dismissed',
 }
