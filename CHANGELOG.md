@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/capawesome-team/sponsorware/compare/v0.2.0...v0.2.1) (2022-09-28)
+
+
+### Bug Fixes
+
+* **ios:** font not visible with certain dark/light mode combination ([#10](https://github.com/capawesome-team/sponsorware/issues/10)) ([fafd18f](https://github.com/capawesome-team/sponsorware/commit/fafd18f0c21bccdd8d9c892922be2b622cdab638))
+
 ## [0.2.0](https://github.com/capawesome-team/sponsorware/compare/v0.1.0...v0.2.0) (2022-08-24)
 
 
