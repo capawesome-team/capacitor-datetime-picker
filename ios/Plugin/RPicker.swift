@@ -264,6 +264,7 @@ class RPickerController: UIViewController {
         transView.backgroundColor = UIColor(white: 0.1, alpha: 0.3)
         datePicker.backgroundColor = UIColor.white
         datePicker.setValue(UIColor.black, forKey: "textColor")
+        datePicker.overrideUserInterfaceStyle = .light
         toolBarView.backgroundColor = UIColor.white
     }
 
@@ -273,6 +274,7 @@ class RPickerController: UIViewController {
         transView.backgroundColor = UIColor(white: 1, alpha: 0.3)
         datePicker.backgroundColor = UIColor.black
         datePicker.setValue(UIColor.white, forKey: "textColor")
+        datePicker.overrideUserInterfaceStyle = .dark
         toolBarView.backgroundColor = UIColor.black
     }
 
