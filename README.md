@@ -42,7 +42,7 @@ However, we kindly ask you to respect our **fair use policy**:
 
 ## Demo
 
-A working example can be found here: [robingenz/capacitor-plugin-demo](https://github.com/robingenz/capacitor-plugin-demo/tree/sponsorware)
+A working example can be found here: [robingenz/capacitor-plugin-demo](https://github.com/robingenz/capacitor-plugin-demo)
 
 | Android                                                                                                                         | iOS                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
