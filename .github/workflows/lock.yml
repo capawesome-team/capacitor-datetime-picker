@@ -2,7 +2,7 @@ name: Lock old issues and pull requests that are closed
 
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '0 8 * * *'
   workflow_dispatch:
 
 permissions:
