@@ -214,7 +214,7 @@ class RPickerController: UIViewController {
                 height += pickerHeight
             } else {
                 if datePicker.datePickerMode == .dateAndTime {
-                    height += 428
+                    height += 468
                 } else if datePicker.datePickerMode == .date {
                     height += 386
                 } else {
