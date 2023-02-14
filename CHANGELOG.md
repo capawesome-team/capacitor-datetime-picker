@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/capawesome-team/sponsorware/compare/v0.2.1...v0.2.2) (2023-02-14)
+
+
+### Bug Fixes
+
+* **ios:** respect safe area at the bottom ([#11](https://github.com/capawesome-team/sponsorware/issues/11)) ([facae16](https://github.com/capawesome-team/sponsorware/commit/facae162ab69d9120a4d7d41dba4f1b0d29e0148))
+
 ### [0.2.1](https://github.com/capawesome-team/sponsorware/compare/v0.2.0...v0.2.1) (2022-09-28)
 
 
