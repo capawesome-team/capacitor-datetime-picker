@@ -46,7 +46,8 @@ This template is integrated with ESLint, Prettier, and SwiftLint. Using these to
 There is a `prepublishOnly` hook in `package.json` which prepares the plugin before publishing, so all you need to do is run:
 
 ```shell
-npm publish
+npm publish --@capawesome-team:registry=https://npm.pkg.github.com
+npm publish --@capawesome-team:registry=https://registry.npmjs.org
 ```
 
 > **Note**: The [`files`](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#files) array in `package.json` specifies which files get published. If you rename files/directories or add files elsewhere, you may need to update it.
