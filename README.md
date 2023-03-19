@@ -7,11 +7,11 @@
 
 <p align="center">
   <img src="https://img.shields.io/maintenance/yes/2023?style=flat-square" />
-  <!-- <a href="https://github.com/capawesome-team/capacitor-datetime-picker/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/capawesome-team/capacitor-datetime-picker/CI/main?style=flat-square" /></a> -->
+  <a href="https://github.com/capawesome-team/capacitor-datetime-picker/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/capawesome-team/capacitor-datetime-picker/CI/main?style=flat-square" /></a>
   <a href="https://github.com/capawesome-team/capacitor-datetime-picker"><img src="https://img.shields.io/github/license/capawesome-team/capacitor-datetime-picker?style=flat-square" /></a>
-<!-- <br> -->
-  <!-- <a href="https://www.npmjs.com/package/@capawesome-team/capacitor-datetime-picker"><img src="https://img.shields.io/npm/dw/@capawesome-team/capacitor-datetime-picker?style=flat-square" /></a> -->
-  <!-- <a href="https://www.npmjs.com/package/@capawesome-team/capacitor-datetime-picker"><img src="https://img.shields.io/npm/v/@capawesome-team/capacitor-datetime-picker?style=flat-square" /></a> -->
+<br>
+  <a href="https://www.npmjs.com/package/@capawesome-team/capacitor-datetime-picker"><img src="https://img.shields.io/npm/dw/@capawesome-team/capacitor-datetime-picker?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/@capawesome-team/capacitor-datetime-picker"><img src="https://img.shields.io/npm/v/@capawesome-team/capacitor-datetime-picker?style=flat-square" /></a>
   <a href="https://github.com/capawesome-team"><img src="https://img.shields.io/badge/part%20of-capawesome-%234f46e5?style=flat-square" /></a>
 </p>
 
@@ -20,25 +20,6 @@
 | Maintainer | GitHub                                    | Social                                        |
 | ---------- | ----------------------------------------- | --------------------------------------------- |
 | Robin Genz | [robingenz](https://github.com/robingenz) | [@robin_genz](https://twitter.com/robin_genz) |
-
-## Sponsorware
-
-This project is available as **Sponsorware**.
-
-> Sponsorware is a release strategy for open-source software that enables developers to be compensated for their open-source work with fewer downsides than traditional open-source funding models. ([Source](https://github.com/sponsorware/docs))
-
-This means...
-
-- The source code will be published as soon as [our GitHub Sponsors goal](https://github.com/sponsors/capawesome-team) is reached.
-- Any GitHub sponsor with a [sponsorware tier](https://github.com/sponsors/capawesome-team?frequency=recurring) gets **immediate access** to our sponsors-only repository and can start using the project right away.
-
-## Terms
-
-This project is licensed under the terms of the MIT license.  
-However, we kindly ask you to respect our **fair use policy**:
-
-- Please **don't distribute the source code** of the sponsors-only repository. You may freely use it for public, private or commercial projects, privately fork or mirror it, but please don't make the source code public, as it would counteract the sponsorware strategy.
-- If you cancel your subscription, you're automatically removed as a collaborator and will miss out on all future updates. However, **you may use the latest version that's available to you as long as you like**.
 
 ## Demo
 
@@ -61,7 +42,14 @@ A working example can be found here: [robingenz/capacitor-plugin-demo](https://g
 
 ## Installation
 
-See [Getting started with Insiders](https://capawesome.io/insiders/getting-started/?plugin=capacitor-datetime-picker) and follow the instructions to install the plugin.
+If you are an [Insider](https://capawesome.io/insiders/#what-is-insiders), see [Getting started with Insiders](https://capawesome.io/insiders/getting-started/?plugin=capacitor-datetime-picker) and follow the instructions to install the plugin.
+
+If you are **not** an Insider, please install the package from the public npm registry:
+
+```bash
+npm install @capawesome-team/capacitor-datetime-picker
+npx cap sync
+```
 
 ## Configuration
 
