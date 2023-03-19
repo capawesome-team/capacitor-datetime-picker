@@ -29,17 +29,6 @@ A working example can be found here: [robingenz/capacitor-plugin-demo](https://g
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | <img src="https://user-images.githubusercontent.com/13857929/184545710-a837f45f-e335-4903-b3a9-e1f30b42163f.gif" width="324" /> | <img src="https://user-images.githubusercontent.com/13857929/184545717-a10291e4-95fe-4453-91f7-c04246c61dec.gif" width="266" /> |
 
-## FAQ
-
-1. **Which platforms are supported?**  
-   This plugin supports Android and iOS.
-1. **Which Capacitor versions are supported?**  
-   There is a version for Capacitor 3 and Capacitor 4. However, new updates are only ever provided for the latest Capacitor major version (currently Capacitor 4).
-1. **What do I do when I have a feature request?**  
-   Please submit your feature request [here](https://github.com/capawesome-team/capacitor-datetime-picker/issues/new/choose). We will then review it and possibly put it on our roadmap.
-1. **What do I do when I have found a bug?**  
-   Bug reports have top priority. Please submit your bug report [here](https://github.com/capawesome-team/capacitor-datetime-picker/issues/new/choose). We will take a look at it as soon as possible.
-
 ## Installation
 
 If you are an [Insider](https://capawesome.io/insiders/#what-is-insiders), see [Getting started with Insiders](https://capawesome.io/insiders/getting-started/?plugin=capacitor-datetime-picker) and follow the instructions to install the plugin.
