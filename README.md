@@ -7,7 +7,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/maintenance/yes/2023?style=flat-square" />
-  <a href="https://github.com/capawesome-team/capacitor-datetime-picker/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/workflow/status/capawesome-team/capacitor-datetime-picker/CI/main?style=flat-square" /></a>
+  <a href="https://github.com/capawesome-team/capacitor-datetime-picker/actions?query=workflow%3A%22CI%22"><img src="https://img.shields.io/github/actions/workflow/status/capawesome-team/capacitor-datetime-picker/ci.yml?branch=main&style=flat-square" /></a>
   <a href="https://github.com/capawesome-team/capacitor-datetime-picker"><img src="https://img.shields.io/github/license/capawesome-team/capacitor-datetime-picker?style=flat-square" /></a>
 <br>
   <a href="https://www.npmjs.com/package/@capawesome-team/capacitor-datetime-picker"><img src="https://img.shields.io/npm/dw/@capawesome-team/capacitor-datetime-picker?style=flat-square" /></a>
